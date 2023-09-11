@@ -78,13 +78,22 @@ Duplicate the session & enter in a new console --
 `bin/kafka-console-consumer.sh --topic demo_testing2 --bootstrap-server {Put the Public IP of your EC2 Instance:9092}`
 The kafka server is fully established and running.
 
-## STEP 3: Create an s3 Bucket
+### STEP 3: Create an s3 Bucket
 To create an s3 bucket, search for s3 and click on **Create bucket** to create your s3 bucket
 
-## Step 4: Create a AWS glue IAM role
+### Step 4: Create a AWS glue IAM role
 To do this, search for IAM and click on **Roles** and create a AWS Glue role and give it *AmazonS3FullAccess* permission policies
 
-## Step 5: Stream data to your s3 bucket
-To stream data into s3, ***kafkaProducer.ipynb*** change the 
+### Step 5: Stream data to your s3 bucket
+To stream data into s3, first change the path inside ***kafkaProducer.ipynb*** to the path of your s3 bucket. in ***kafkaProducer.ipynb*** run the second to last code to start the producer and also on ***kafkaConsumer.ipynb*** run the last code to establish a consumer. Notice the data immediately starts populating on your created s3 bucket
+<div align="left"> <img src="https://raw.githubusercontent.com/GeoSegun/Kafka-based-Stock-Market-Data-Integration/main/images/image_5.jpg"> </div>
 
-## Step 6: 
+### Step 6: Catalogue the Data with AWS Athena
+Search for AWS Glue and create a crawler which automate the discovery and cataloging of the data in the S3 bucket. Next use AWS athena to quary the data for insights
+
+## Usage
+Once the project is set up and configured, you can execute the data pipeline to start ingesting and processing real-time stock market data. The project documentation provides detailed instructions on how to run the producer and consumer components, as well as how to utilize AWS Glue and Athena for data analysis.
+
+## Contributing
+Contributions to the Stock Market Kafka Real Time Data Engineering Project are welcome! If you encounter any issues, have ideas for improvements, or would like to contribute new features, please submit a pull request. We appreciate your input and collaboration in making this project even better.
+
