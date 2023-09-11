@@ -86,7 +86,7 @@ To do this, search for IAM and click on **Roles** and create a AWS Glue role and
 
 ### Step 5: Stream data to your s3 bucket
 To stream data into s3, first change the path inside ***kafkaProducer.ipynb*** to the path of your s3 bucket. in ***kafkaProducer.ipynb*** run the second to last code to start the producer and also on ***kafkaConsumer.ipynb*** run the last code to establish a consumer. Notice the data immediately starts populating on your created s3 bucket
-<div align="left"> <img src="https://raw.githubusercontent.com/GeoSegun/Kafka-based-Stock-Market-Data-Integration/main/images/image_5.jpg"> </div>
+<div align="left"> <img src="https://raw.githubusercontent.com/GeoSegun/Kafka-based-Stock-Market-Data-Integration/main/images/image_5.JPG"> </div>
 
 ### Step 6: Catalogue the Data with AWS Athena
 Search for AWS Glue and create a crawler which automate the discovery and cataloging of the data in the S3 bucket. Next use AWS athena to quary the data for insights
